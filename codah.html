@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codah - Dylan</title>
+  <meta name="description" content="Description de la page ici" />
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .carousel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 600px;
+  object-fit: contain; /* affiche toute l'image sans la couper */
+  display: none;
+  transition: transform 0.4s ease, opacity 0.5s ease-in-out;
+  border-radius: 12px;
+  background-color: #000; /* pour que les images aient un fond noir si elles ne remplissent pas tout */
+}
+
+.carousel img.active {
+  display: block;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.svg" width="170" height="40" alt="Logo Dylan" />
+      </a>
+      <button class="nav-toggle-btn" data-nav-toggler aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="./index.html#top" class="navbar-link">Accueil</a></li>
+          <li><a href="./index.html#competences" class="navbar-link">Compétences</a></li>
+          <li><a href="./index.html#experiences" class="navbar-link">Expériences</a></li>
+          <li><a href="./index.html#projets-realisations" class="navbar-link">Projets</a></li>
+          <li><a href="./index.html#skills" class="navbar-link">Techs</a></li>
+          <li><a href="./index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main style="padding-top: 130px;">
+    <section class="section">
+      <div class="container">
+        <h1 class="h1">Projet Codah</h1>
+
+        <!-- Carrousel d'images avec flèches -->
+        <div class="carousel-wrapper">
+          <button class="carousel-button left" onclick="changeSlide(-1)">&#10094;</button>
+          <div class="carousel">
+            <img src="./assets/images/Codah/codah1.png" class="active" alt="Capture Codah 1">
+            <img src="./assets/images/Codah/codah2.png" alt="Capture Codah 2">
+            <img src="./assets/images/Codah/codah3.png" alt="Capture Codah 3">
+            <img src="./assets/images/Codah/codah4.png" alt="Capture Codah 4">
+            <img src="./assets/images/Codah/codah5.png" alt="Capture Codah 5">
+            <img src="./assets/images/Codah/codah6.png" alt="Capture Codah 6">
+          </div>
+          <button class="carousel-button right" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Détails du projet -->
+        <h2 class="h2">Description</h2>
+        <p class="section-text">Application de consultation des droits, accès et habilitation</p>
+
+        <h2 class="h2" style="margin-top: 30px;">Informations supplémentaires</h2>
+        <p class="section-text">Cette application a été développée pour améliorer l'efficacité des services administratifs.</p>
+
+        <h2 class="h2" style="margin-top: 30px;">Fonctionnalités</h2>
+        <ul class="section-text">
+          <li>Recherche par utilisateur et département</li>
+          <li>Accès aux référentiels multiples pour une gestion optimisée</li>
+          <li>Extraction de données via un bouton Excel pour une analyse approfondie</li>
+          <li>Suivi des droits et habilitations journaliers</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container" style="text-align: center; padding: 40px 0;">
+      <p class="h4 footer-list-title" style="margin-bottom: 20px; font-size: 24px; font-weight: bold;">
+        Me contacter
+      </p>
+      <ul class="social-list" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
+        <li><a href="mailto:dyld56110@gmail.com" class="social-link"><ion-icon name="mail-outline" size="large"></ion-icon></a></li>
+        <li><a href="https://github.com/Grqeen" class="social-link"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/dylan-ait-eldjoudi-574112291/" class="social-link"><ion-icon name="logo-linkedin" size="large"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/dylan_grq" class="social-link"><ion-icon name="logo-instagram" size="large"></ion-icon></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function changeSlide(direction) {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }
+  </script>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

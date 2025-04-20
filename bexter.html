@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bexter - Dylan</title>
+  <meta name="description" content="Présentation de Bexter - Portfolio de Dylan" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <header class="header" data-header>
+    <div class="container">
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.svg" width="170" height="40" alt="Logo" />
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggler aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="#presentation" class="navbar-link">Présentation</a></li>
+          <li><a href="#missions" class="navbar-link">Missions</a></li>
+          <li><a href="#equipe" class="navbar-link">Équipe</a></li>
+        </ul>
+      </nav>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article class="section" style="padding-top: 130px;">
+      <div class="container">
+
+        <section id="presentation">
+          <h1 class="h1">Bexter</h1>
+          <p class="section-text">Solutions logicielles pour la santé et la logistique</p>
+          <p class="section-text">
+            Bexter est une entreprise innovante spécialisée dans le développement de solutions numériques destinées à améliorer la traçabilité, la sécurité et l’efficacité dans les domaines de la santé et de la logistique.
+          </p>
+
+          <h2 class="h2" style="margin-top: 40px;">Présentation de Bexter</h2>
+          <p class="section-text">
+            Fondée en 2005, Bexter conçoit et développe des logiciels métiers à forte valeur ajoutée. Elle est notamment à l'origine de la solution **Traçabilité SANTÉ**, largement déployée dans les établissements hospitaliers et médico-sociaux.
+          </p>
+
+          <ul class="section-text" style="padding-left: 20px; margin-top: 20px;">
+            <li><strong>Secteur :</strong> e-santé, logistique, traçabilité numérique.</li>
+            <li><strong>Expertise :</strong> solutions sur mesure, ergonomie, sécurité des données.</li>
+            <li><strong>Innovation :</strong> forte culture R&D et amélioration continue.</li>
+            <li><strong>Implantation :</strong> siège à Labège, en région toulousaine.</li>
+            <li><strong>Clients :</strong> hôpitaux, cliniques, EHPAD, collectivités, transporteurs.</li>
+            <li><strong>Technologies :</strong> web, mobile, cloud, RFID, IoT.</li>
+          </ul>
+        </section>
+
+        <section id="missions" style="margin-top: 80px;">
+          <h2 class="h2">Valeurs</h2>
+          <p class="section-text">
+            Bexter s'engage à accompagner ses clients avec des outils fiables, innovants et conçus pour répondre aux enjeux du terrain dans les secteurs sensibles comme la santé.
+          </p>
+
+          <div class="projects-grid" style="margin-top: 40px;">
+            <div class="project-card">
+              <h3>Innovation</h3>
+              <p>Conception de solutions technologiques évolutives et robustes.</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Proximité</h3>
+              <p>Écoute des besoins clients et accompagnement personnalisé.</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Fiabilité</h3>
+              <p>Respect des normes, sécurité des données, continuité de service.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="equipe" style="margin-top: 80px;">
+          <h2 class="h2">L'équipe technique</h2>
+          <p class="section-text">
+            L’équipe de Bexter est composée de professionnels passionnés par la technologie et l’innovation, œuvrant ensemble pour répondre aux besoins spécifiques des établissements de santé et du secteur logistique.
+          </p>
+
+          <div class="projects-grid" style="margin-top: 40px;">
+            <div class="project-card">
+              <h3>Développement logiciel</h3>
+              <p>Conception des solutions web et mobiles adaptées aux processus métiers.</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Infrastructure & Cloud</h3>
+              <p>Hébergement sécurisé, maintenance, supervision des services cloud.</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Support & Formation</h3>
+              <p>Assistance technique, accompagnement des utilisateurs et formations.</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Qualité & conformité</h3>
+              <p>Respect des exigences réglementaires du secteur de la santé.</p>
+            </div>
+
+            <div class="project-card">
+              <h3>Gestion de projets</h3>
+              <p>Coordination agile des projets clients et évolutions fonctionnelles.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container" style="text-align: center; padding: 40px 0;">
+      <p class="h4 footer-list-title" style="margin-bottom: 20px; font-size: 24px; font-weight: bold;">
+        Me contacter
+      </p>
+      <ul class="social-list" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
+        <li><a href="mailto:dyld56110@gmail.com" class="social-link"><ion-icon name="mail-outline" size="large"></ion-icon></a></li>
+        <li><a href="https://github.com/Grqeen" class="social-link"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/dylan-ait-eldjoudi-574112291/" class="social-link"><ion-icon name="logo-linkedin" size="large"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/dylan_grq" class="social-link"><ion-icon name="logo-instagram" size="large"></ion-icon></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

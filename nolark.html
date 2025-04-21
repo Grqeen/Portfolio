@@ -13,10 +13,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .carousel-wrapper {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 600px;
+      object-fit: contain;
+      /* affiche toute l'image sans la couper */
+      display: none;
+      transition: transform 0.4s ease, opacity 0.5s ease-in-out;
+      border-radius: 12px;
+      background-color: #000;
+      /* pour que les images aient un fond noir si elles ne remplissent pas tout */
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 30px;
+      z-index: 1;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-button.left {
+      left: 10px;
+    }
+
+    .carousel-button.right {
+      right: 10px;
+    }
+  </style>
 </head>
 
 <body>
-
   <!-- Preloader -->
   <div class="preloader" data-preloader>
     <div class="circle"></div>
@@ -28,12 +87,10 @@
       <a href="./index.html" class="logo">
         <img src="./assets/images/logo.svg" width="170" height="40" alt="Logo Dylan" />
       </a>
-
       <button class="nav-toggle-btn" data-nav-toggler aria-label="Toggle menu">
         <span class="line line-1"></span>
         <span class="line line-2"></span>
       </button>
-
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
           <li><a href="./index.html#top" class="navbar-link">Accueil</a></li>
@@ -44,7 +101,6 @@
           <li><a href="./index.html#contact" class="navbar-link">Contact</a></li>
         </ul>
       </nav>
-
       <div class="overlay" data-nav-toggler data-overlay></div>
     </div>
   </header>
@@ -53,8 +109,39 @@
   <main style="padding-top: 130px;">
     <section class="section">
       <div class="container">
-        <h1 class="h1">Titre de ta nouvelle page</h1>
-        <p class="section-text">Ajoute ici ton contenu personnalisé.</p>
+        <h1 class="h1">Projet Nolark</h1>
+
+        <!-- Carrousel d'images avec flèches -->
+        <div class="carousel-wrapper">
+          <button class="carousel-button left" onclick="changeSlide(-1)">&#10094;</button>
+          <div class="carousel">
+            <img src="./assets/images/nolark/nolark1.jpg" class="active" alt="Capture nolark 1">
+            <img src="./assets/images/nolark/nolark2.jpg" alt="Capture nolark 2">
+            <img src="./assets/images/nolark/nolark3.jpg" alt="Capture nolark 3">
+          </div>
+          <button class="carousel-button right" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Détails du projet -->
+        <h2 class="h2">Description</h2>
+        <p class="section-text">
+          Site web de vente de casques de moto en ligne avec catalogue de produits, système de filtrage et informations
+          sur la sécurité routière.
+        </p>
+
+        <h2 class="h2" style="margin-top: 30px;">Informations supplémentaires</h2>
+        <p class="section-text">
+          Projet pédagogique réalisé dans le cadre du BTS SIO pour mettre en pratique les compétences en développement
+          web.
+        </p>
+
+        <h2 class="h2" style="margin-top: 30px;">Fonctionnalités</h2>
+        <ul class="section-text">
+          <li>Développement d'un site web responsive avec HTML, CSS et JavaScript</li>
+          <li>Formulaire de contact avec validation côté client et serveur</li>
+          <li>Section informative sur la sécurité routière et les normes des casques</li>
+          <li>Optimisation pour le référencement naturel (SEO)</li>
+        </ul>
       </div>
     </section>
   </main>
@@ -66,15 +153,29 @@
         Me contacter
       </p>
       <ul class="social-list" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
-        <li><a href="mailto:dyld56110@gmail.com" class="social-link"><ion-icon name="mail-outline" size="large"></ion-icon></a></li>
-        <li><a href="https://github.com/Grqeen" class="social-link"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
-        <li><a href="https://www.linkedin.com/in/dylan-ait-eldjoudi-574112291/" class="social-link"><ion-icon name="logo-linkedin" size="large"></ion-icon></a></li>
-        <li><a href="https://www.instagram.com/dylan_grq" class="social-link"><ion-icon name="logo-instagram" size="large"></ion-icon></a></li>
+        <li><a href="mailto:dyld56110@gmail.com" class="social-link"><ion-icon name="mail-outline"
+              size="large"></ion-icon></a></li>
+        <li><a href="https://github.com/Grqeen" class="social-link"><ion-icon name="logo-github"
+              size="large"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/dylan-ait-eldjoudi-574112291/" class="social-link"><ion-icon
+              name="logo-linkedin" size="large"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/dylan_grq" class="social-link"><ion-icon name="logo-instagram"
+              size="large"></ion-icon></a></li>
       </ul>
     </div>
   </footer>
 
   <!-- Scripts -->
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function changeSlide(direction) {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }
+  </script>
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
